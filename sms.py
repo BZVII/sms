@@ -12,7 +12,6 @@ simbolos = {
 }
 
 
-frase = 'PIGMONCHU@GMAIL.COM'
 
 def caracter_a_tecla(c):
     for tecla in simbolos.keys():
@@ -23,10 +22,10 @@ def caracter_a_tecla(c):
     return '_'
     
             
+def traduce(cadena):
+    cadena = cadena.upper()
+    r = ''
+    for caracter in cadena:
+        r += caracter_a_tecla(caracter) + ' '
+    return r[:-1]
 
-r = ''
-for caracter in frase:
-    r += caracter_a_tecla(caracter) + ' '
-r = r[:-1]
-
-print('{} es -{}-'.format(frase, r))
